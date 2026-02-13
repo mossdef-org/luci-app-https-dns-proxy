@@ -10,7 +10,7 @@ PKG_VERSION:=2025.12.29
 PKG_RELEASE:=3
 
 LUCI_TITLE:=DNS Over HTTPS Proxy Web UI
-LUCI_URL:=https://github.com/stangri/luci-app-https-dns-proxy/
+LUCI_URL:=https://github.com/mossdef-org/luci-app-https-dns-proxy/
 LUCI_DESCRIPTION:=Provides Web UI for DNS Over HTTPS Proxy
 LUCI_DEPENDS:=+luci-base +https-dns-proxy
 
