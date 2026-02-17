@@ -49,7 +49,7 @@ get_init_status() {
 	local i ports
 	local version
 	name="$(basename "$1")"
-	name="${name:-$packageName}" 
+	name="${name:-${packageName}}" 
 	ports="$(ubus_get_ports)"
 	[ -z "$version" ] && version="$(get_version "$name")"
 	json_init
@@ -82,7 +82,7 @@ get_init_status() {
 get_platform_support() {
 	local name
 	name="$(basename "$1")"
-	name="${name:-$packageName}" 
+	name="${name:-${packageName}}" 
 	json_init
 	json_add_object "$name"
 	if check_http2; then
