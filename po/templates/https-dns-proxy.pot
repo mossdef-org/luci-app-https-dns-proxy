@@ -809,7 +809,7 @@ msgid "ns1: Germany - Baden-Baden"
 msgstr ""
 
 #: applications/luci-app-https-dns-proxy/root/usr/share/https-dns-proxy/providers/org.opennameserver.json:18
-msgid "ns2: Germany - D�seldorf"
+msgid "ns2: Germany - Düsseldorf"
 msgstr ""
 
 #: applications/luci-app-https-dns-proxy/root/usr/share/https-dns-proxy/providers/org.opennameserver.json:22

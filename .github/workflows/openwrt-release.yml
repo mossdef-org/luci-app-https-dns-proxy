@@ -6,12 +6,31 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
+  test:
+    name: Functional tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run functional tests
+        run: bash tests/run_tests.sh
+
   build:
     name: Build for ${{ matrix.version }} / ${{ matrix.target }}
+    needs: test
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     env:
       REPO_APK_KEY: ${{ secrets.REPO_APK_KEY }}
 
