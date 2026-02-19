@@ -459,6 +459,24 @@ else
 fi
 
 ###############################################################################
+#                         SHELL SCRIPT SYNTAX                                 #
+###############################################################################
+
+printf "\n--- Shell script syntax ---\n"
+for shellscript in \
+	root/etc/uci-defaults/*; do
+	[ -f "$shellscript" ] || continue
+	head -1 "$shellscript" | grep -q '^#!/bin/sh' || continue
+	name="${shellscript#root/}"
+	n_tests=$((n_tests + 1))
+	if sh -n "$shellscript" 2>/dev/null; then
+		pass "sh -n $name"
+	else
+		fail "sh -n $name" "$(sh -n "$shellscript" 2>&1)"
+	fi
+done
+
+###############################################################################
 #                               SUMMARY                                       #
 ###############################################################################
 
