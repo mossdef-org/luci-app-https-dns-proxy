@@ -259,7 +259,7 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
-#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:58
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:55
 msgid "Force DNS Ports"
 msgstr ""
 
@@ -399,12 +399,12 @@ msgstr ""
 
 #: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/https-dns-proxy/overview.js:258
 #: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/https-dns-proxy/overview.js:539
-#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:56
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:53
 msgid "Listen Address"
 msgstr ""
 
 #: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/https-dns-proxy/overview.js:550
-#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:57
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:54
 msgid "Listen Port"
 msgstr ""
 
@@ -441,7 +441,7 @@ msgstr ""
 msgid "Mullvad"
 msgstr ""
 
-#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:55
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:52
 msgid "Name / Type"
 msgstr ""
 
@@ -685,7 +685,7 @@ msgstr ""
 msgid "The domain used for connectivity checks (%smore information%s)."
 msgstr ""
 
-#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:105
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:103
 msgid "There are no active instances."
 msgstr ""
 
@@ -713,12 +713,17 @@ msgstr ""
 msgid "US/New York"
 msgstr ""
 
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:108
+msgid "Unable to retrieve %s status"
+msgstr ""
+
 #: applications/luci-app-https-dns-proxy/root/usr/share/https-dns-proxy/providers/com.adguard.dns.json:18
 #: applications/luci-app-https-dns-proxy/root/usr/share/https-dns-proxy/providers/eu.joindns4.json:14
 msgid "Unfiltered"
 msgstr ""
 
 #: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/https-dns-proxy/overview.js:379
+#: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/status/include/71_https-dns-proxy.js:101
 msgid "Unknown"
 msgstr ""
 
