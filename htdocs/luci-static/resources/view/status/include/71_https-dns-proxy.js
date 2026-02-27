@@ -4,6 +4,7 @@
 "require form";
 "require baseclass";
 "require https-dns-proxy.status as hdp";
+/* globals hdp */
 
 var pkg = hdp.pkg;
 
