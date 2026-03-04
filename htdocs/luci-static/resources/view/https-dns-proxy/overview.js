@@ -459,6 +459,15 @@ return view.extend({
 			L.uci.unset(pkg.Name, section_id, "resolver_url");
 			L.uci.unset(pkg.Name, section_id, "bootstrap_dns");
 		};
+		_provider.save = function (section_id) {
+			if (this.isActive(section_id)) {
+				var fval = this.formvalue(section_id);
+				if (fval != null && fval !== '') {
+					return this.write(section_id, fval);
+				}
+			}
+			return this.remove(section_id);
+		};
 
 		function createProviderWidget(s, i, prov) {
 			if (
