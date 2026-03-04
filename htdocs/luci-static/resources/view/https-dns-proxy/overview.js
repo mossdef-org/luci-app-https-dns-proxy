@@ -118,6 +118,18 @@ return view.extend({
 			});
 			o.depends("dnsmasq_config_update_option", "+");
 			o.retain = true;
+			o.renderFrame = function (section_id, in_table, option_index, nodes) {
+				var frame = form.Value.prototype.renderFrame.apply(this, arguments);
+				if (frame && frame.querySelector) {
+					var label = frame.querySelector("label.cbi-value-title");
+					if (label) {
+						var div = E("div", { class: label.className });
+						while (label.firstChild) div.appendChild(label.firstChild);
+						label.parentNode.replaceChild(div, label);
+					}
+				}
+				return frame;
+			};
 		}
 
 		o = s.taboption(
@@ -383,6 +395,7 @@ return view.extend({
 		var _provider;
 		_provider = s.option(form.ListValue, "_provider", _("Provider"));
 		_provider.modalonly = true;
+		_provider.forcewrite = true;
 		_provider.cfgvalue = function (section_id) {
 			let resolver = this.map.data.get(
 				this.map.config,
@@ -459,15 +472,6 @@ return view.extend({
 			L.uci.unset(pkg.Name, section_id, "resolver_url");
 			L.uci.unset(pkg.Name, section_id, "bootstrap_dns");
 		};
-		_provider.save = function (section_id) {
-			if (this.isActive(section_id)) {
-				var fval = this.formvalue(section_id);
-				if (fval != null && fval !== '') {
-					return this.write(section_id, fval);
-				}
-			}
-			return this.remove(section_id);
-		};
 
 		function createProviderWidget(s, i, prov) {
 			if (
@@ -489,6 +493,18 @@ return view.extend({
 						_paramList.value(val, descr);
 					});
 					_paramList.depends("_provider", prov.template);
+					_paramList.cfgvalue = function (section_id) {
+						let resolver = this.map.data.get(
+							this.map.config,
+							section_id,
+							"resolver_url"
+						);
+						if (resolver === undefined || resolver === null)
+							return prov.params.option.default || null;
+						let regexp = pkg.templateToRegexp(prov.template);
+						let match = resolver.match(regexp);
+						return (match && match[1]) || prov.params.option.default || null;
+					};
 					_paramList.write = function (section_id, formvalue) { };
 					_paramList.remove = function (section_id, formvalue) { };
 				} else if (prov.params.option.type === "text") {

@@ -185,7 +185,7 @@ var status = baseclass.extend({
 
 			var header = E("h2", {}, _("HTTPS DNS Proxy - Status"));
 			var statusTitle = E(
-				"label",
+				"div",
 				{ class: "cbi-value-title" },
 				_("Service Status")
 			);
@@ -221,7 +221,7 @@ var status = baseclass.extend({
 			var instancesDiv = [];
 			if (reply.ubus.instances && Object.keys(reply.ubus.instances).length > 0) {
 				var instancesTitle = E(
-					"label",
+					"div",
 					{ class: "cbi-value-title" },
 					_("Service Instances")
 				);
@@ -428,7 +428,7 @@ var status = baseclass.extend({
 			}
 
 			var buttonsTitle = E(
-				"label",
+				"div",
 				{ class: "cbi-value-title" },
 				_("Service Control")
 			);
