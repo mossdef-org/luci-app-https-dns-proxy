@@ -18,7 +18,7 @@ var pkg = {
 	},
 	get URL() {
 		return (
-			"https://docs.openwrt.melmac.ca/" +
+			"https://docs.mossdef.org/" +
 			pkg.Name +
 			"/" +
 			(pkg.ReadmeCompat ? pkg.ReadmeCompat + "/" : "")
@@ -26,7 +26,7 @@ var pkg = {
 	},
 	get DonateURL() {
 		return (
-			"https://docs.openwrt.melmac.ca/" +
+			"https://docs.mossdef.org/" +
 			pkg.Name +
 			"/" +
 			(pkg.ReadmeCompat ? pkg.ReadmeCompat + "/" : "") +
