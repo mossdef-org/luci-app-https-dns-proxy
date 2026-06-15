@@ -186,7 +186,7 @@ return view.extend({
 			)
 		);
 		o.optional = true;
-		o.placeholder = "heartbeat.melmac.ca";
+		o.placeholder = "heartbeat.mossdef.org";
 
 		o = s.taboption(
 			"service",
