@@ -11,7 +11,7 @@ PKG_RELEASE:=1
 PKG_CPE_ID:=cpe:/a:mossdef:luci-app-https-dns-proxy
 
 LUCI_TITLE:=DNS Over HTTPS Proxy Web UI
-LUCI_URL:=https://github.com/mossdef-org/luci-app-https-dns-proxy/
+LUCI_URL:=https://docs.mossdef.org/https-dns-proxy/
 LUCI_DESCRIPTION:=Provides Web UI for DNS Over HTTPS Proxy
 LUCI_DEPENDS:=+luci-base +https-dns-proxy
 
