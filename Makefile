@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-https-dns-proxy
 PKG_LICENSE:=AGPL-3.0-or-later
 PKG_MAINTAINER:=Stan Grishin <stangri@melmac.ca>
-PKG_VERSION:=2026.05.06
+PKG_VERSION:=2026.07.21
 PKG_RELEASE:=1
 PKG_CPE_ID:=cpe:/a:mossdef:luci-app-https-dns-proxy
 
