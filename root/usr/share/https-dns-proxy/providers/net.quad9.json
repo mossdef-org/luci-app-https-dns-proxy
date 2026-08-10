@@ -24,6 +24,10 @@
 				{
 					"value": "dns11",
 					"description": "Secured with ECS Support"
+				},
+				{
+					"value": "dns12",
+					"description": "Unsecured with ECS Support"
 				}
 			],
 			"default": "dns"
