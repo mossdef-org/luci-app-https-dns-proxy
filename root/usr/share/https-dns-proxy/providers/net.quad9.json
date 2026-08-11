@@ -7,7 +7,7 @@
 		"option": {
 			"description": "Variant",
 			"type": "select",
-			"regex": "(dns|dns9|dns10|dns11)",
+			"regex": "(dns|dns9|dns10|dns11|dns12)",
 			"options": [
 				{
 					"value": "dns",
