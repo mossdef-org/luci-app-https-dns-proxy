@@ -759,6 +759,10 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
+#: applications/luci-app-https-dns-proxy/root/usr/share/https-dns-proxy/providers/net.quad9.json:30
+msgid "Unsecured with ECS Support"
+msgstr ""
+
 #: applications/luci-app-https-dns-proxy/htdocs/luci-static/resources/view/https-dns-proxy/overview.js:65
 msgid "Update DNSMASQ Config on Start/Stop"
 msgstr ""
