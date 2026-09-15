@@ -1,0 +1,5 @@
+{
+	"title": "Astracat DNS (RU)",
+	"template": "https://dns.astracat.ru/dns-query",
+	"bootstrap_dns": "185.139.69.24,77.91.66.130"
+}
